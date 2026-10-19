@@ -1,0 +1,22 @@
+name: topofusion
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - pyyaml
+  - h5py
+  - tqdm
+  - matplotlib
+  - seaborn
+  - pytorch
+  - torchvision
+  - pyg
+  - pip
+  - pip:
+      - lifelines

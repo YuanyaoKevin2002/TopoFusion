@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="260" viewBox="0 0 1280 260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E9C9E3"/>
+      <stop offset="35%" stop-color="#D3CCF2"/>
+      <stop offset="70%" stop-color="#C6E0F5"/>
+      <stop offset="100%" stop-color="#C4E6DF"/>
+    </linearGradient>
+  </defs>
+  <!-- main band with wavy lower edge -->
+  <path d="M0 0 H1280 V206 C1060 236 860 196 640 216 C420 236 220 204 0 226 Z" fill="url(#bg)"/>
+  <!-- translucent second wave -->
+  <path d="M0 226 C220 204 420 236 640 216 C860 196 1060 236 1280 206 V228 C1060 256 860 220 640 240 C420 258 220 228 0 250 Z" fill="url(#bg)" opacity="0.35"/>
+  <!-- small graph motif (nodes + edges) -->
+  <g stroke="#3C2F6B" stroke-opacity="0.30" stroke-width="2">
+    <line x1="1090" y1="50" x2="1160" y2="86"/><line x1="1160" y1="86" x2="1222" y2="42"/>
+    <line x1="1160" y1="86" x2="1130" y2="132"/><line x1="1160" y1="86" x2="1232" y2="122"/>
+  </g>
+  <g fill="#3C2F6B" fill-opacity="0.35">
+    <circle cx="1090" cy="50" r="7"/><circle cx="1160" cy="86" r="9"/><circle cx="1222" cy="42" r="6"/>
+    <circle cx="1130" cy="132" r="5"/><circle cx="1232" cy="122" r="6"/>
+  </g>
+  <text x="64" y="96" font-family="Helvetica Neue, Arial, sans-serif" font-size="76" font-weight="700" fill="#1F2340">TopoFusion:</text>
+  <text x="92" y="144" font-family="Helvetica Neue, Arial, sans-serif" font-size="27" font-weight="500" fill="#33395C">Tissue-Aware Graph Learning with Cellular Topology for Molecular</text>
+  <text x="92" y="180" font-family="Helvetica Neue, Arial, sans-serif" font-size="27" font-weight="500" fill="#33395C">and Prognostic Analysis of Colorectal Cancer Whole-Slide Images</text>
+</svg>

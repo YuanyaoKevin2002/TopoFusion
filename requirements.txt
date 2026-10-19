@@ -1,0 +1,17 @@
+# Public dependencies for TopoFusion code templates
+python>=3.9
+numpy
+pandas
+scipy
+scikit-learn
+pyyaml
+h5py
+tqdm
+matplotlib
+seaborn
+lifelines
+torch>=2.0
+torchvision
+torch-geometric
+# Optional: install PyG companion packages matching your CUDA/PyTorch version.
+# Optional feature extractors such as UNI or CellViT should be installed from their public releases.

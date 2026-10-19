@@ -1,0 +1,46 @@
+# Data and private artifacts
+data/
+private_data/
+clinical/
+manifests/*.csv
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.parquet
+*.feather
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Model artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+checkpoints/
+runs/
+cache/
+outputs/
+results/
+results_export/
+logs/
+wandb/
+
+# Python/cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.env
+
+# OS/editor
+.DS_Store
+._*
+*.swp
+*~
+*.json
+*.log

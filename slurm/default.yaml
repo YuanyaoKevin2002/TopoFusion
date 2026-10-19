@@ -1,0 +1,69 @@
+project_root: ${PROJECT_ROOT}
+audit_csv: ${PROJECT_ROOT}/outputs/updated_cohort_intersection/slide_level_audit.csv
+
+manifest:
+  out_csv: ${PROJECT_ROOT}/manifests/topofusion_v3_connectfix_manifest.csv
+  split_json: ${PROJECT_ROOT}/manifests/topofusion_v3_connectfix_splits.json
+  val_fraction: 0.20
+  seed: 42
+
+cache:
+  TRAIN_COHORT_root: ${PROJECT_ROOT}/cache/graphs
+  external_root: ${DATA_ROOT}/CRC_Multimodal_HE/TopoFusion/topofusion_v3_connectivity_fix_cache/graphs
+  cell_feature_cache_root: ${DATA_ROOT}/CRC_Multimodal_HE/TopoFusion/topofusion_v3_cell_cache
+  cell_feature_cache_datasets: EXTERNAL_COHORT_B
+  use_cell_feature_cache: true
+  write_cell_feature_cache: true
+  tissue_core_threshold: 0.50
+  lym_rescue_threshold: 0.20
+  muc_rescue_threshold: -1.0
+  knn_k: 8
+  max_edge_dist: 300.0
+  target_max_components: 5
+  component_bridge_max_dist: 1500.0
+  component_bridge_neighbor_k: 64
+  component_bridge_bidirectional: true
+  component_bridge_dist_norm_cap: 5.0
+  coord_scale_to_model: 0.5
+  patch_size_mpp025: 256.0
+  cell_buffer_px: 64.0
+  cell_radius_px: 50.0
+  cell_cap_ext: 1000
+  min_nodes_after_filter: 8
+
+training:
+  run_root: ${PROJECT_ROOT}/runs
+  epochs: 80
+  batch_size: 2
+  grad_accum_steps: 2
+  num_workers: 2
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  min_epochs: 20
+  early_stop_patience: 20
+  class_weight_mode: inv_sqrt
+  use_weighted_sampler: true
+  eval_EXTERNAL_COHORT_B_cached: false
+  margin_lambda: 0.1
+  margin_value: 0.2
+  seed: 42
+
+model:
+  patch_in_dim: 1536
+  patch_hidden_dim: 512
+  fused_dim: 128
+  cell_in_dim: 12
+  pos_dim: 32
+  tissue_dim: 4
+  edge_raw_dim: 6
+  edge_dim: 16
+  gat_hidden_dim: 128
+  gat_heads: 4
+  patch_dropout1: 0.2
+  patch_dropout2: 0.1
+  gnn_dropout_in: 0.2
+  gnn_dropout_mid: 0.1
+  dropedge: 0.10
+  modality_cell_only_prob: 0.4
+  modality_patch_only_prob: 0.1
+  interface_temperature: 1.0
